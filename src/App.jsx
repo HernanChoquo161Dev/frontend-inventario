@@ -8,12 +8,12 @@ function App() {
   const obtenerDatos = async () => {
     try {
       // Pedimos los productos
-      const resProductos = await fetch('http://localhost:3000/api/productos');
+      const resProductos = await fetch('http://192.168.2.101:3000/api/productos');
       const dataProductos = await resProductos.json();
       setProductos(dataProductos);
 
       // Pedimos los usuarios que vienen de la Raspberry
-      const resUsuarios = await fetch('http://localhost:3000/api/usuarios');
+      const resUsuarios = await fetch('http://192.168.2.101:3000/api/usuarios');
       const dataUsuarios = await resUsuarios.json();
       setUsuarios(dataUsuarios);
     } catch (error) {
